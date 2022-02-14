@@ -7,4 +7,6 @@
 <% when 'not in dict' %>
   <p>Sorry, but <strong><%= @word %></strong> does not seem to be a valid English word...</p>
 <% end %>
+<p>Score: <%= @score %></p>
+<p>Total score: <%= session[:total_score] %></p>
 <%= link_to 'Play again', new_path %>
