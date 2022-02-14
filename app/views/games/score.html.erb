@@ -1,0 +1,10 @@
+<h1>Result</h1>
+<% case @result %>
+<% when 'won' %>
+  <p><strong>Congratulations!</strong> <%= @word %> is a valid English word!</p>
+<% when 'not buildable' %>
+  <p>Sorry but <strong><%= @word %></strong> can't be built out of <%= @letters.split('').join(', ') %></p>
+<% when 'not in dict' %>
+  <p>Sorry, but <strong><%= @word %></strong> does not seem to be a valid English word...</p>
+<% end %>
+<%= link_to 'Play again', new_path %>
